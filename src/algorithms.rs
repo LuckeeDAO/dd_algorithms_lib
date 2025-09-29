@@ -250,12 +250,12 @@ pub fn get_one_dd_rand_num(values: &[u128], n: usize, out: &mut u128) -> Result<
 ///
 /// # Algorithm
 ///
-/// 1. Calculate base values: output[i] = sum of all group[i] % n
+/// 1. Calculate base values: output\[i\] = sum of all group\[i\] % n
 /// 2. Initialize temp bool array of size n (all false)
 /// 3. For each output value:
 ///    - Start with base_value as offset
-///    - If temp[offset] is false, use it and mark as true
-///    - If temp[offset] is true, increment offset and check again
+///    - If temp\[offset\] is false, use it and mark as true
+///    - If temp\[offset\] is true, increment offset and check again
 ///    - Wrap around if offset exceeds array size
 ///
 /// # Arguments
