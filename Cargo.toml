@@ -8,6 +8,13 @@ license = "MIT"
 repository = "https://github.com/iunknow588/dd_algorithms_lib"
 documentation = "https://docs.rs/dd_algorithms_lib"
 readme = "README.md"
+include = [
+    "Cargo.toml",
+    "README.md",
+    "LICENSE",
+    "src/**",
+    "examples/**"
+]
 keywords = [
     "decentralized",
     "fair-division",
