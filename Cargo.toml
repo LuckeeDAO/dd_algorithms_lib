@@ -1,0 +1,49 @@
+[package]
+name = "dd_algorithms_lib"
+version = "0.1.0"
+edition = "2021"
+authors = ["iunknow <iunknow@163.com>"]
+description = "A library for decentralized decision making, fair division algorithms, and governance mathematics"
+license = "MIT"
+repository = "https://github.com/iunknow588/dd_algorithms_lib"
+documentation = "https://docs.rs/dd_algorithms_lib"
+readme = "README.md"
+keywords = [
+    "decentralized",
+    "fair-division",
+    "algorithms",
+    "no-std",
+    "governance"
+]
+categories = ["algorithms", "mathematics", "no-std"]
+rust-version = "1.70"
+
+[features]
+default = []
+cosmwasm = []
+std = ["dep:serde", "dep:serde_json"]
+serde = ["dep:serde", "dep:serde_json"]
+log_tests = []
+
+[dependencies]
+# Core dependencies for no_std
+# (none needed for core functionality)
+
+# Optional dependencies for std builds
+serde = { version = "1.0", optional = true, features = ["derive"] }
+serde_json = { version = "1.0", optional = true }
+
+[dev-dependencies]
+criterion = { version = "0.5", features = ["html_reports"] }
+
+[[example]]
+name = "governance_example"
+path = "examples/governance_example.rs"
+
+[[example]]
+name = "function_names_test"
+path = "examples/function_names_test.rs"
+
+# [[bench]]
+# name = "benchmarks"
+# harness = false
